@@ -14,14 +14,20 @@ body {
 
 main { /*It's better to make inner container grid instead of body element.*/
     display:grid;
-    grid-template-columns: minmax(3rem,1fr) minmax(min-content, 45rem) minmax(3rem,1fr);
-    row-gap:2rem;
+    grid-template-columns: minmax(3rem,1fr) minmax(min-content, 60rem) minmax(3rem,1fr);
+    row-gap:1rem;
 }
 
 .heading {
-    grid-column: 2/3;
+    grid-column: 2 / 3;
     display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    row-gap: 1rem;
+}
 
+.heading-main { /*This separates the heading image and texts from others and it makes them fit into 1 column.*/
+    grid-column: 1/-1;
+    position:relative;
 }
 
 header h1, header p{
@@ -39,20 +45,60 @@ header p {
 
 .text {
     grid-column: 2/3;
+    text-align: justify;
 }
 
 .social-media{
     display:grid;
     grid-template-columns:repeat(5,1fr);
-    font-size:2rem;
+    font-size:1.5rem;
+    align-items: center;
 }
 
-.introduction {
+.introduction{
     display:grid;
     column-gap:2rem;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.text-and-images {
+    display:grid;
+    column-gap:2rem;
+    grid-template-columns: 2fr 2fr;
+}
+
+a {
+    color:#ffffff;
+    text-decoration: none;
+}
+
+.owner-anchor:hover {
+    background-color:blue;
 }
 
 img {
     width: 100%;
     object-fit: cover;
+}
+
+h4 {
+    font-size:1.5rem;
+    color:#7CFC00;
+}
+
+hr {
+    margin:1rem auto;
+    border:1px solid #7CFC00;
+}
+
+blockquote p { 
+    font-size:1rem;
+    color:#7CFC00;
+    text-align:center;
+}
+
+.owner {
+    font-family: Georgia,sans-serif;
+    font-size:1.3rem;
+    color:#7CFC00;
 }
