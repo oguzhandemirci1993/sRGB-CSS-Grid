@@ -1,0 +1,58 @@
+*,
+::before,
+::after {
+  padding: 0;  
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #008080;
+    color:#ffffff;
+    font-family:Verdana, sans-serif;
+}
+
+main { /*It's better to make inner container grid instead of body element.*/
+    display:grid;
+    grid-template-columns: minmax(3rem,1fr) minmax(min-content, 45rem) minmax(3rem,1fr);
+    row-gap:2rem;
+}
+
+.heading {
+    grid-column: 2/3;
+    display:grid;
+
+}
+
+header h1, header p{
+    text-align: center;
+    color:#7CFC00;
+}
+
+header h1 {
+    font-size:3rem;    
+}
+
+header p {
+    font-size:1.5rem;    
+}
+
+.text {
+    grid-column: 2/3;
+}
+
+.social-media{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    font-size:2rem;
+}
+
+.introduction {
+    display:grid;
+    column-gap:2rem;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
