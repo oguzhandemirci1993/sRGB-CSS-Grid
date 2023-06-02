@@ -3,7 +3,7 @@
 ::after {
   padding: 0;  
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 body {
@@ -16,6 +16,7 @@ main { /*It's better to make inner container grid instead of body element.*/
     display:grid;
     grid-template-columns: minmax(3rem,1fr) minmax(min-content, 60rem) minmax(3rem,1fr);
     row-gap:1rem;
+    margin:1rem 0;
 }
 
 .heading {
@@ -36,11 +37,13 @@ header h1, header p{
 }
 
 header h1 {
-    font-size:3rem;    
+    font-size:3rem;
+    text-size-adjust: auto;    
 }
 
 header p {
-    font-size:1.5rem;    
+    font-size:1.5rem;   
+    text-size-adjust: auto;  
 }
 
 .text {
@@ -72,7 +75,7 @@ a {
 }
 
 h4 {
-    font-size:1.5rem;
+    font-size:1rem;
     color:#7CFC00;
 }
 
@@ -92,14 +95,43 @@ blockquote p {
     font-size:1.3rem;
 }
 
-.RGB{
+.RGB {
     grid-column: 2 / 3;
+}
+
+.RGB-img{
     display:grid;
     grid-template-columns: repeat(3,1fr);
     column-gap: 1rem;
 }
 
-.RGB-img{ /*This class selector prevents the page from becoming bigger and having a horizontal scroll bar.*/
-    width: 100%;
+.RGB-image{ /*This class selector prevents the page from becoming bigger and having a horizontal scroll bar.*/
+    width: 100%; 
     object-fit:contain; /*red, green and blue images will stay at certain size.*/
+}
+
+.text p {
+    margin-bottom:1rem;
+}
+
+.date{
+    color:#00ffff;
+}
+
+.RGB-quote {
+    margin-top: 1rem;
+    text-align: center;
+    color:#00ffff;
+}
+
+@media only screen and (max-width: 550px) {
+    header h1 {
+      font-size: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    header h1 {
+      font-size:1.25rem;
+    }
 }
