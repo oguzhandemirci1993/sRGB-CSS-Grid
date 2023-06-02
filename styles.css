@@ -31,6 +31,11 @@ main { /*It's better to make inner container grid instead of body element.*/
     position:relative;
 }
 
+.heading-img {
+    width: 100%;
+    object-fit: cover;
+}
+
 header h1, header p{
     text-align: center;
     color:#7CFC00;
@@ -46,20 +51,6 @@ header p {
     text-size-adjust: auto;  
 }
 
-.text {
-    grid-column: 2 / 3;
-    text-align: justify;
-    column-width:15rem; /*CSS grid fills the rows first. So, in order to fill columns first, we can use column-width property*/  
-    column-gap:1rem;
-}
-
-.social-media{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    font-size:1.5rem;
-    align-items: center;
-}
-
 a {
     color:#ffffff;
     text-decoration: none;
@@ -69,9 +60,31 @@ a {
     background-color:blue;
 }
 
-.heading-img {
-    width: 100%;
-    object-fit: cover;
+.owner {
+    font-family: Georgia,sans-serif;
+    font-size:1.3rem;
+}
+
+.date{
+    color:#00ffff;
+}
+
+.social-media{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    font-size:1.5rem;
+    align-items: center;
+}
+
+.text {
+    grid-column: 2 / 3;
+    text-align: justify;
+    column-width:15rem; /*CSS grid fills the rows first. So, in order to fill columns first, we can use column-width property*/  
+    column-gap:1rem;
+}
+
+.text p {
+    margin-bottom:1rem;
 }
 
 h4 {
@@ -90,11 +103,6 @@ blockquote p {
     text-align:center;
 }
 
-.owner {
-    font-family: Georgia,sans-serif;
-    font-size:1.3rem;
-}
-
 .RGB {
     grid-column: 2 / 3;
 }
@@ -110,28 +118,8 @@ blockquote p {
     object-fit:contain; /*red, green and blue images will stay at certain size.*/
 }
 
-.text p {
-    margin-bottom:1rem;
-}
-
-.date{
-    color:#00ffff;
-}
-
 .RGB-quote {
     margin-top: 1rem;
     text-align: center;
     color:#00ffff;
-}
-
-@media only screen and (max-width: 550px) {
-    header h1 {
-      font-size: 1.25rem;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    header h1 {
-      font-size:1.25rem;
-    }
 }
