@@ -25,7 +25,7 @@ main { /*It's better to make inner container grid instead of body element.*/
     row-gap: 1rem;
 }
 
-.heading-main, .images img { /*This separates the heading image and texts from others and it makes them fit into 1 column.*/
+.heading-main{ /*This separates the heading image and texts from others and it makes them fit into 1 column.*/
     grid-column: 1/-1;
     position:relative;
 }
@@ -66,7 +66,7 @@ a {
     background-color:blue;
 }
 
-img {
+.heading-img {
     width: 100%;
     object-fit: cover;
 }
@@ -90,5 +90,16 @@ blockquote p {
 .owner {
     font-family: Georgia,sans-serif;
     font-size:1.3rem;
-    color:#7CFC00;
+}
+
+.RGB{
+    grid-column: 2 / 3;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 1rem;
+}
+
+.RGB-img{ /*This class selector prevents the page from becoming bigger and having a horizontal scroll bar.*/
+    width: 100%;
+    object-fit:contain; /*red, green and blue images will stay at certain size.*/
 }
