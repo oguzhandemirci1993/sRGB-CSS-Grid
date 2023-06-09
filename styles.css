@@ -87,6 +87,13 @@ a {
     margin-bottom:1rem;
 }
 
+#big-letter::first-letter {
+    font-size:5rem;
+    color:#7CFC00;
+    float:left;
+    margin:0 1rem 0 0;
+}
+
 h4 {
     font-size:1rem;
     color:#7CFC00;
